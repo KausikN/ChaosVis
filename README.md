@@ -15,9 +15,9 @@
    - Visualise Chaos Theory using attractor systems
     - Lorenz Attractor System
 
-      ![Lorenz Attractor Random](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/LorenzAttractor_Random.gif)
+      ![Lorenz Attractor Random](GeneratedVisualisations/LorenzAttractor_Random.gif)
 
-      ![Lorenz Attractor Uniform](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/LorenzAttractor_Uniform.gif)
+      ![Lorenz Attractor Uniform](GeneratedVisualisations/LorenzAttractor_Uniform.gif)
 
       Video on Lorenz Attractor
    
@@ -25,9 +25,9 @@
 
    - Aizawa Attractor System
 
-      ![Aizawa Attractor Random](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/AizawaAttractor_Random.gif)
+      ![Aizawa Attractor Random]GeneratedVisualisations/AizawaAttractor_Random.gif)
 
-      ![Aizawa Attractor Uniform](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/AizawaAttractor_Uniform.gif)
+      ![Aizawa Attractor Uniform](GeneratedVisualisations/AizawaAttractor_Uniform.gif)
    
       Video on Aizawa Attractor
    
