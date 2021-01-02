@@ -13,22 +13,22 @@
 
 # Attractor Systems
    - Visualise Chaos Theory using attractor systems
-    - Lorenz Attractor System
+     - Lorenz Attractor System
 
-      ![Lorenz Attractor Random](GeneratedVisualisations/LorenzAttractor_Random.gif)
+        ![Lorenz Attractor Random](GeneratedVisualisations/LorenzAttractor_Random.gif)
 
-      ![Lorenz Attractor Uniform](GeneratedVisualisations/LorenzAttractor_Uniform.gif)
+        ![Lorenz Attractor Uniform](GeneratedVisualisations/LorenzAttractor_Uniform.gif)
 
-      Video on Lorenz Attractor
+        Video on Lorenz Attractor
+
+        [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
+
+     - Aizawa Attractor System
    
-      [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
+        ![Aizawa Attractor Random](GeneratedVisualisations/AizawaAttractor_Random.gif)
 
-   - Aizawa Attractor System
+        ![Aizawa Attractor Uniform](GeneratedVisualisations/AizawaAttractor_Uniform.gif)
 
-      ![Aizawa Attractor Random]GeneratedVisualisations/AizawaAttractor_Random.gif)
+        Video on Aizawa Attractor
 
-      ![Aizawa Attractor Uniform](GeneratedVisualisations/AizawaAttractor_Uniform.gif)
-   
-      Video on Aizawa Attractor
-   
-      [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
+        [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
