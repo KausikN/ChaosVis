@@ -1,12 +1,8 @@
 '''
 Algorithm Visualisation for Chaos Theory and Lorenz Attractor System
 Chaos Theory Link: https://www.youtube.com/watch?v=fDek6cYijxI
-Lorenz Attractor Link: https://www.youtube.com/watch?v=VjP90rwpBwU
-Aizawa Attractor Link: https://www.youtube.com/watch?v=RBqbQUu-p00
-Newton-Leipnip Attractor Link: 
 
 Other Attractors Link: https://www.youtube.com/watch?v=idpOunnpKTo
-
 Attractor Formulas: http://www.3d-meier.de/tut19/Seite0.html
 '''
 

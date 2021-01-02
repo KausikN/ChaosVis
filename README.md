@@ -32,3 +32,15 @@
         Video on Aizawa Attractor
 
         [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00U/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
+
+      - Newton-Leipnik Attractor System
+
+        ![Newton-Leipnik Attractor Random](GeneratedVisualisations/NewtonLeipnikAttractor_Random.gif)
+
+        ![Newton-Leipnik Attractor Uniform](GeneratedVisualisations/NewtonLeipnikAttractor_Uniform.gif)
+
+      - 3 Cell CNN Attractor System
+
+        ![3 Cell CNN Attractor Random](GeneratedVisualisations/3CellCNNAttractor_Random.gif)
+
+        ![3 Cell CNN Attractor Uniform](GeneratedVisualisations/3CellCNNAttractor_Uniform.gif)

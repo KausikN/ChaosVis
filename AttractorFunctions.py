@@ -11,6 +11,8 @@ import numpy as np
 def Deriv_Lorenz(pt, t0, sigma=10, beta=8/3, rho=28):
     """Compute the time-derivative of a Lorentz system."""
     """
+    Lorenz Attractor Link: https://www.youtube.com/watch?v=VjP90rwpBwU
+
     dx = sigma * (y - x)
     dy = x * (rho - z) - y
     dz = x * y - beta * z
@@ -37,6 +39,8 @@ def Deriv_Lorenz(pt, t0, sigma=10, beta=8/3, rho=28):
 def Deriv_Aizawa(pt, t0, a=0.95, b=0.7, c=0.6, d=3.5, e=0.25, f=0.1):
     """Compute the time-derivative of a Aizawa system."""
     """
+    Aizawa Attractor Link: https://www.youtube.com/watch?v=RBqbQUu-p00
+
     dx = (z-b) * x - d*y
     dy = d * x + (z-b) * y
     dz = c + a*z - z**3 /3 - x**2 + f * z * x**3
