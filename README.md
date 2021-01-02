@@ -13,7 +13,7 @@
 
 # Attractor Systems
    - Visualise Chaos Theory using attractor systems
-     - Lorenz Attractor System
+      - Lorenz Attractor System
 
         ![Lorenz Attractor Random](GeneratedVisualisations/LorenzAttractor_Random.gif)
 
@@ -23,12 +23,12 @@
 
         [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
 
-     - Aizawa Attractor System
-   
+      - Aizawa Attractor System
+
         ![Aizawa Attractor Random](GeneratedVisualisations/AizawaAttractor_Random.gif)
 
         ![Aizawa Attractor Uniform](GeneratedVisualisations/AizawaAttractor_Uniform.gif)
 
         Video on Aizawa Attractor
 
-        [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
+        [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00U/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)

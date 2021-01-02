@@ -18,9 +18,13 @@ def Deriv_Lorenz(pt, t0, sigma=10, beta=8/3, rho=28):
     sigma = 10, beta = 8/3, rho = 28
 
     timeInterval = [0, 4]
+    AttractorFunc = AttractorFunctions.Deriv_Lorenz
+    saveName = "Lorenz"
     GenerationLimits = [(-15, 15), (-15, 15), (-15, 15)]
-    plotLims = [(-30, 30), (-30, 30), (0, 50)]
+    plotLims = [(-30, 30), (-30, 30), (0, 55)]
     speedUpFactor = 2
+
+    frames = 250
     """
     x, y, z = pt
 
@@ -40,9 +44,13 @@ def Deriv_Aizawa(pt, t0, a=0.95, b=0.7, c=0.6, d=3.5, e=0.25, f=0.1):
     a = 0.95, b = 0.7, c = 0.6, d = 3.5, e = 0.25, f = 0.1
 
     timeInterval = [0, 10]
+    AttractorFunc = AttractorFunctions.Deriv_Aizawa
+    saveName = "AizawaAttractor"
     GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
     plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-0.5, 1.5)]
     speedUpFactor = 2
+
+    frames = 250
     """
     x, y, z = pt
 
@@ -60,6 +68,15 @@ def Deriv_NewtonLeipnik(pt, t0, a=0.4, b=0.175):
     dz = b*z - 5*x*y
 
     a = 0.4, b = 0.175
+
+    timeInterval = [0, 60]
+    AttractorFunc = AttractorFunctions.Deriv_NewtonLeipnik
+    saveName = "NewtonLeipnikAttractor"
+    GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-1, 1), (-1, 1), (-0.375, 0.65)]
+    speedUpFactor = 2
+
+    frames = 500
     """
     x, y, z = pt
 
@@ -69,7 +86,7 @@ def Deriv_NewtonLeipnik(pt, t0, a=0.4, b=0.175):
 
     return [dx, dy, dz]
 
-def Deriv_NewtonLeipnik(pt, t0, p1=1.24, p2=1.1, r=4.4, s=3.21):
+def Deriv_3CellCNN(pt, t0, p1=1.24, p2=1.1, r=4.4, s=3.21):
     """Compute the time-derivative of a 3-Cell CNN system."""
     """
     dx = -x + p1*h1 - s*h2 - s*h3
@@ -80,6 +97,15 @@ def Deriv_NewtonLeipnik(pt, t0, p1=1.24, p2=1.1, r=4.4, s=3.21):
     h2 = (1/2)*(|y+1| - |y-1|)
     h3 = (1/2)*(|z+1| - |z-1|)
     p1 = 1.24, p2 = 1.1, r = 4.4, s = 3.21
+
+    timeInterval = [0, 60]
+    AttractorFunc = AttractorFunctions.Deriv_NewtonLeipnik
+    saveName = "3CellCNNAttractor"
+    GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-1, 1), (-1, 1), (-0.375, 0.65)]
+    speedUpFactor = 2
+
+    frames = 250
     """
     x, y, z = pt
 

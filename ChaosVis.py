@@ -22,7 +22,7 @@ from matplotlib.colors import cnames
 from matplotlib import animation
 from tqdm import tqdm
 
-from Libraries import AttractorFunctions
+import AttractorFunctions
 
 # Main Variables
 Lines = []
@@ -140,19 +140,26 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 # Driver Code
 # Params
 N_trajectories = 27
-AttractorFunc = AttractorFunctions.Deriv_NewtonLeipnik
 GeneratorFunc = GeneratePoints_UniformRandom
-timeInterval = [0, 25]
 
+timeInterval = [0, 25]
+AttractorFunc = AttractorFunctions.Deriv_3CellCNN
+saveName = "3CellCNNAttractor"
 GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
-plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-0.6, 1.5)]
+plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1.0, 1.0)]
+speedUpFactor = 2
+
 frames = 250
 frame_interval = 30
-speedUpFactor = 1
 rotationSpeed = 3
 
 plotData = False
-saveData = {"save": True, "path":"AlgoVis/GeneratedVisualisations/NewtonLeipnikAttractor_Random.gif", "fps": 30}
+saveData = {
+    "save": True,
+    "path":"GeneratedVisualisations/" + saveName + "_" +
+        ("Uniform" if GeneratorFunc == GeneratePoints_Uniform else "Random") + ".gif",
+    "fps": 30
+    }
 # Params
 
 # RunCode
