@@ -21,17 +21,14 @@
       - Aizawa Attractor System
 
         ![Aizawa Attractor Random](GeneratedVisualisations/AizawaAttractor_Random.gif)
-
         ![Aizawa Attractor Uniform](GeneratedVisualisations/AizawaAttractor_Uniform.gif)
 
       - Newton-Leipnik Attractor System
 
         ![Newton-Leipnik Attractor Random](GeneratedVisualisations/NewtonLeipnikAttractor_Random.gif)
-
         ![Newton-Leipnik Attractor Uniform](GeneratedVisualisations/NewtonLeipnikAttractor_Uniform.gif)
 
       - 3 Cell CNN Attractor System
 
         ![3 Cell CNN Attractor Random](GeneratedVisualisations/3CellCNNAttractor_Random.gif)
-
         ![3 Cell CNN Attractor Uniform](GeneratedVisualisations/3CellCNNAttractor_Uniform.gif)
