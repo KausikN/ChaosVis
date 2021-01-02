@@ -7,28 +7,28 @@
 
  Chaos theory led to other popular concepts like The Butterfly Effect
 
-## Attractor Systems
+ Video on Chaos Theory
+   
+ [![Chaos Theory Video](https://img.youtube.com/vi/fDek6cYijxI/0.jpg)](https://www.youtube.com/watch?v=fDek6cYijxI)
+
+# Attractor Systems
    - Visualise Chaos Theory using attractor systems
-      - Lorenz Attractor System
+    - Lorenz Attractor System
 
       ![Lorenz Attractor Random](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/LorenzAttractor_Random.gif)
 
       ![Lorenz Attractor Uniform](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/LorenzAttractor_Uniform.gif)
 
-      - Aizawa Attractor System
+      - Video on Lorenz Attractor
+   
+      [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
+
+    - Aizawa Attractor System
 
       ![Aizawa Attractor Random](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/AizawaAttractor_Random.gif)
 
       ![Aizawa Attractor Uniform](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/AizawaAttractor_Uniform.gif)
    
-   - Video on Chaos Theory
+      - Video on Aizawa Attractor
    
-   [![Chaos Theory Video](https://img.youtube.com/vi/fDek6cYijxI/0.jpg)](https://www.youtube.com/watch?v=fDek6cYijxI)
-
-   - Video on Lorenz Attractor
-   
-   [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
-
-   - Video on Aizawa Attractor
-   
-   [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
+      [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
