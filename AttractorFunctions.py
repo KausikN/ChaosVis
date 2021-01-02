@@ -21,7 +21,7 @@ def Deriv_Lorenz(pt, t0, sigma=10, beta=8/3, rho=28):
 
     timeInterval = [0, 4]
     AttractorFunc = AttractorFunctions.Deriv_Lorenz
-    saveName = "Lorenz"
+    saveName = "LorenzAttractor"
     GenerationLimits = [(-15, 15), (-15, 15), (-15, 15)]
     plotLims = [(-30, 30), (-30, 30), (0, 55)]
     speedUpFactor = 2
@@ -102,11 +102,11 @@ def Deriv_3CellCNN(pt, t0, p1=1.24, p2=1.1, r=4.4, s=3.21):
     h3 = (1/2)*(|z+1| - |z-1|)
     p1 = 1.24, p2 = 1.1, r = 4.4, s = 3.21
 
-    timeInterval = [0, 60]
-    AttractorFunc = AttractorFunctions.Deriv_NewtonLeipnik
+    timeInterval = [0, 25]
+    AttractorFunc = AttractorFunctions.Deriv_3CellCNN
     saveName = "3CellCNNAttractor"
     GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
-    plotLims = [(-1, 1), (-1, 1), (-0.375, 0.65)]
+    plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1.0, 1.0)]
     speedUpFactor = 2
 
     frames = 250

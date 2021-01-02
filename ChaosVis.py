@@ -96,7 +96,7 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
     x_t = np.asarray([integrate.odeint(AttractorFunc, sP, time) for sP in tqdm(startPoints)])
 
     # Set up figure & 3D axis for animation
-    fig = plt.figure()
+    fig = plt.figure(figsize=saveData["figSize"])
     ax = fig.add_axes([0, 0, 1, 1], projection='3d')
     ax.axis('off')
 
@@ -126,7 +126,7 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
     if saveData["save"]:
         if os.path.splitext(saveData["path"])[-1] == '.gif':
             writer = animation.PillowWriter(fps=saveData["fps"])
-            anim.save(saveData["path"], writer=writer)
+            anim.save(saveData["path"], writer=writer, )
         else:
             anim.save(saveData["path"], fps=saveData["fps"], extra_args=['-vcodec', 'libx264'])
 
@@ -135,14 +135,14 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 
 # Driver Code
 # Params
-N_trajectories = 27
-GeneratorFunc = GeneratePoints_UniformRandom
+N_trajectories = 3
+GeneratorFunc = GeneratePoints_Uniform
 
-timeInterval = [0, 25]
-AttractorFunc = AttractorFunctions.Deriv_3CellCNN
-saveName = "3CellCNNAttractor"
-GenerationLimits = [(-0.01, -0.01), (-0.01, 0.01), (-0.01, 0.01)]
-plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1.0, 1.0)]
+timeInterval = [0, 4]
+AttractorFunc = AttractorFunctions.Deriv_Lorenz
+saveName = "LorenzAttractor"
+GenerationLimits = [(-15, 15), (-15, 15), (-15, 15)]
+plotLims = [(-30, 30), (-30, 30), (0, 55)]
 speedUpFactor = 2
 
 frames = 250
@@ -154,9 +154,11 @@ saveData = {
     "save": True,
     "path":"GeneratedVisualisations/" + saveName + "_" +
         ("Uniform" if GeneratorFunc == GeneratePoints_Uniform else "Random") + ".gif",
-    "fps": 30
+    "fps": 30,
+    "figSize": [320, 240]
     }
 # Params
 
 # RunCode
+saveData["figSize"] = (saveData["figSize"][0]/100, saveData["figSize"][1]/100) # Change FigSize to inches (dpi = 100)
 AnimateChaos(AttractorFunc, N_trajectories, functools.partial(GeneratorFunc, Limits=GenerationLimits), timeInterval=timeInterval, plotLims=plotLims, frames=frames, frame_interval=frame_interval, plotData=plotData, saveData=saveData)
