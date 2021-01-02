@@ -15,20 +15,20 @@
    - Visualise Chaos Theory using attractor systems
     - Lorenz Attractor System
 
-      ![Lorenz Attractor Random](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/LorenzAttractor_Random.gif)
+      ![Lorenz Attractor Random](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/LorenzAttractor_Random.gif)
 
-      ![Lorenz Attractor Uniform](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/LorenzAttractor_Uniform.gif)
+      ![Lorenz Attractor Uniform](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/LorenzAttractor_Uniform.gif)
 
-      - Video on Lorenz Attractor
+      Video on Lorenz Attractor
    
       [![Lorenz Attractor Video](https://img.youtube.com/vi/VjP90rwpBwU/0.jpg)](https://www.youtube.com/watch?v=VjP90rwpBwU)
 
-    - Aizawa Attractor System
+   - Aizawa Attractor System
 
-      ![Aizawa Attractor Random](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/AizawaAttractor_Random.gif)
+      ![Aizawa Attractor Random](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/AizawaAttractor_Random.gif)
 
-      ![Aizawa Attractor Uniform](https://github.com/KausikN/DaVIS/blob/master/AlgoVis/GeneratedVisualisations/AizawaAttractor_Uniform.gif)
+      ![Aizawa Attractor Uniform](https://github.com/KausikN/ChaosVis/blob/master/GeneratedVisualisations/AizawaAttractor_Uniform.gif)
    
-      - Video on Aizawa Attractor
+      Video on Aizawa Attractor
    
       [![Aizawa Attractor Video](https://img.youtube.com/vi/RBqbQUu-p00/0.jpg)](https://www.youtube.com/watch?v=RBqbQUu-p00)
