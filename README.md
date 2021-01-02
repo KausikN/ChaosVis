@@ -16,7 +16,6 @@
       - Lorenz Attractor System
 
         ![Lorenz Attractor Random](GeneratedVisualisations/LorenzAttractor_Random.gif)
-
         ![Lorenz Attractor Uniform](GeneratedVisualisations/LorenzAttractor_Uniform.gif)
 
       - Aizawa Attractor System
