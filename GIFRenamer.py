@@ -1,5 +1,7 @@
 """
 Script to Rename Compressed GIFs from online
+
+Compress GIFS here: https://gifcompressor.com/
 """
 
 # Imports
@@ -22,16 +24,17 @@ def RenameFiles(dirPath, aP=None, aS=None, rP=None, rS=None):
         if aS is not None:
             fname = fname + aS
         
-        os.rename(dirPath + f, dirPath + fname + fext)
-        print(f, "->", fname + fext)
+        if not f == fname + fext:
+            os.rename(dirPath + f, dirPath + fname + fext)
+            print(f, "->", fname + fext)
 
 # Driver Code
 # Params
 dirPath = "GeneratedVisualisations/"
 addPrefix = None
-removePrefix = None
-addSuffix = "m"
-removeSuffix = "-min"
+removePrefix = "0_"
+addSuffix = None
+removeSuffix = "-m"
 # Params
 
 # RunCode

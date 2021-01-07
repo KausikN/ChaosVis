@@ -135,14 +135,14 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 
 # Driver Code
 # Params
-N_trajectories = 3
-GeneratorFunc = GeneratePoints_Uniform
+N_trajectories = 27
+GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 4]
-AttractorFunc = AttractorFunctions.Deriv_Lorenz
-saveName = "LorenzAttractor"
-GenerationLimits = [(-15, 15), (-15, 15), (-15, 15)]
-plotLims = [(-30, 30), (-30, 30), (0, 55)]
+timeInterval = [0, 7.5]
+AttractorFunc = AttractorFunctions.Deriv_BurkeShaw
+saveName = "BurkeShawAttractor"
+GenerationLimits = [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)]
+plotLims = [(-2.5, 2.5), (-2.5, 2.5), (-2.5, 2.5)]
 speedUpFactor = 2
 
 frames = 250

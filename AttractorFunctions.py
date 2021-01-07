@@ -122,3 +122,81 @@ def Deriv_3CellCNN(pt, t0, p1=1.24, p2=1.1, r=4.4, s=3.21):
     dz = -z - s*h1 + r*h2 + h3
 
     return [dx, dy, dz]
+
+def Deriv_Arneodo(pt, t0, a=-5.5, b=3.5, c=-1.0):
+    """Compute the time-derivative of a Arneodo system."""
+    """
+    dx = y
+    dy = z
+    dz = -a*x -b*y - z + c*(x**3)
+
+    a = -5.5, b = 3.5, c = -1.0
+
+    timeInterval = [0, 50]
+    AttractorFunc = AttractorFunctions.Deriv_Arneodo
+    saveName = "ArneodoAttractor"
+    GenerationLimits = [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)]
+    plotLims = [(-4, 4), (-4, 4), (-7.0, 7.0)]
+    speedUpFactor = 1
+
+    frames = 500
+    """
+    x, y, z = pt
+
+    dx = y
+    dy = z
+    dz = -a*x -b*y - z + c*(x**3)
+
+    return [dx, dy, dz]
+
+def Deriv_Bouali(pt, t0, a=0.3, s=1.0):     # OVERSHOOTS
+    """Compute the time-derivative of a Bouali system."""
+    """
+    dx = x*(4 - y) + a*z
+    dy = -y*(1 - (x**2))
+    dz = -x*(1.5 - s*z) - 0.05*z
+
+    a = 0.3, s = 1.0
+
+    timeInterval = [0, 50]
+    AttractorFunc = AttractorFunctions.Deriv_Bouali
+    saveName = "BoualiAttractor"
+    GenerationLimits = [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)]
+    plotLims = [(-4, 4), (-4, 4), (-7.0, 7.0)]
+    speedUpFactor = 1
+
+    frames = 500
+    """
+    x, y, z = pt
+
+    dx = x*(4 - y) + a*z
+    dy = -y*(1 - (x**2))
+    dz = -x*(1.5 - s*z) - 0.05*z
+
+    return [dx, dy, dz]
+
+def Deriv_BurkeShaw(pt, t0, s=10, v=4.272):
+    """Compute the time-derivative of a Burke-Shaw system."""
+    """
+    dx = -s*(x + y)
+    dy = -y - s*x*z
+    dz = s*x*y + v
+
+    s = 10, v = 4.272
+
+    timeInterval = [0, 7.5]
+    AttractorFunc = AttractorFunctions.Deriv_BurkeShaw
+    saveName = "BurkeShawAttractor"
+    GenerationLimits = [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)]
+    plotLims = [(-2.5, 2.5), (-2.5, 2.5), (-2.5, 2.5)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -s*(x + y)
+    dy = -y - s*x*z
+    dz = s*x*y + v
+
+    return [dx, dy, dz]
