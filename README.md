@@ -35,10 +35,15 @@
 
       - Arneodo Attractor System
 
-        ![3 Cell CNN Attractor Random](GeneratedVisualisations/ArneodoAttractor_Random.gif)
-        ![3 Cell CNN Attractor Uniform](GeneratedVisualisations/ArneodoAttractor_Uniform.gif)
+        ![Arneodo Attractor Random](GeneratedVisualisations/ArneodoAttractor_Random.gif)
+        ![Arneodo Attractor Uniform](GeneratedVisualisations/ArneodoAttractor_Uniform.gif)
 
       - Burke-Shaw Attractor System
 
-        ![3 Cell CNN Attractor Random](GeneratedVisualisations/BurkeShawAttractor_Random.gif)
-        ![3 Cell CNN Attractor Uniform](GeneratedVisualisations/BurkeShawAttractor_Uniform.gif)
+        ![Burke-Shaw Attractor Random](GeneratedVisualisations/BurkeShawAttractor_Random.gif)
+        ![Burke-Shaw Attractor Uniform](GeneratedVisualisations/BurkeShawAttractor_Uniform.gif)
+
+      - Chen-Celikovsky Attractor System
+
+        ![Chen-Celikovsky Attractor Random](GeneratedVisualisations/ChenCelikovskyAttractor_Random.gif)
+        ![Chen-Celikovsky Attractor Uniform](GeneratedVisualisations/ChenCelikovskyAttractor_Uniform.gif)

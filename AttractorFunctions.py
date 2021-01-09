@@ -200,3 +200,29 @@ def Deriv_BurkeShaw(pt, t0, s=10, v=4.272):
     dz = s*x*y + v
 
     return [dx, dy, dz]
+
+def Deriv_ChenCelikovsky(pt, t0, a=36, b=3, c=20):
+    """Compute the time-derivative of a Chen-Celikovsky system."""
+    """
+    dx = a*(y - x)
+    dy = -x*z + c*y
+    dz = x*y - b*z
+
+    a = 36, b = 3, c = 20
+
+    timeInterval = [0, 5]
+    AttractorFunc = AttractorFunctions.Deriv_ChenCelikovsky
+    saveName = "ChenCelikovskyAttractor"
+    GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
+    plotLims = [(-25, 25), (-25, 25), (10, 45)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = a*(y - x)
+    dy = -x*z + c*y
+    dz = x*y - b*z
+
+    return [dx, dy, dz]
