@@ -138,11 +138,11 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 5]
-AttractorFunc = AttractorFunctions.Deriv_ChenCelikovsky
-saveName = "ChenCelikovskyAttractor"
+timeInterval = [0, 3.5]
+AttractorFunc = AttractorFunctions.Deriv_ChenLee
+saveName = "ChenLeeAttractor"
 GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
-plotLims = [(-25, 25), (-25, 25), (10, 45)]
+plotLims = [(-50, 50), (-50, 50), (-75, 75)]
 speedUpFactor = 2
 
 frames = 250

@@ -47,3 +47,8 @@
 
         ![Chen-Celikovsky Attractor Random](GeneratedVisualisations/ChenCelikovskyAttractor_Random.gif)
         ![Chen-Celikovsky Attractor Uniform](GeneratedVisualisations/ChenCelikovskyAttractor_Uniform.gif)
+
+      - Chen-Lee Attractor System
+
+        ![Chen-Lee Attractor Random](GeneratedVisualisations/ChenLeeAttractor_Random.gif)
+        ![Chen-Lee Attractor Uniform](GeneratedVisualisations/ChenLeeAttractor_Uniform.gif)

@@ -226,3 +226,29 @@ def Deriv_ChenCelikovsky(pt, t0, a=36, b=3, c=20):
     dz = x*y - b*z
 
     return [dx, dy, dz]
+
+def Deriv_ChenLee(pt, t0, a=5, b=-10, c=-0.38):
+    """Compute the time-derivative of a Chen-Lee system."""
+    """
+    dx = a*x - y*z
+    dy = b*y + x*z
+    dz = c*z + x*(y/3)
+
+    a = 5, b = -10, c = -0.38
+
+    timeInterval = [0, 5]
+    AttractorFunc = AttractorFunctions.Deriv_ChenLee
+    saveName = "ChenLeeAttractor"
+    GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
+    plotLims = [(-25, 25), (-25, 25), (10, 45)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = a*x - y*z
+    dy = b*y + x*z
+    dz = c*z + x*(y/3)
+
+    return [dx, dy, dz]
