@@ -32,9 +32,9 @@ def RenameFiles(dirPath, aP=None, aS=None, rP=None, rS=None):
 # Params
 dirPath = "GeneratedVisualisations/"
 addPrefix = None
-removePrefix = "0_"
+removePrefix = "0UC_"
 addSuffix = None
-removeSuffix = "-m"
+removeSuffix = "-min"
 # Params
 
 # RunCode

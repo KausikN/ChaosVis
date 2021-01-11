@@ -3,7 +3,6 @@ Algorithm Visualisation for Chaos Theory and Lorenz Attractor System
 Chaos Theory Link: https://www.youtube.com/watch?v=fDek6cYijxI
 
 Other Attractors Link: https://www.youtube.com/watch?v=idpOunnpKTo
-Attractor Formulas: http://www.3d-meier.de/tut19/Seite0.html
 '''
 
 # Imports
@@ -138,21 +137,21 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 3.5]
-AttractorFunc = AttractorFunctions.Deriv_ChenLee
-saveName = "ChenLeeAttractor"
+timeInterval = [0, 20]
+AttractorFunc = AttractorFunctions.Deriv_Finance
+saveName = "FinanceAttractor"
 GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
-plotLims = [(-50, 50), (-50, 50), (-75, 75)]
+plotLims = [(-7.5, 0), (-7.5, 0), (-10, 5)]
 speedUpFactor = 2
 
 frames = 250
 frame_interval = 30
-rotationSpeed = 3
+rotationSpeed = 0
 
 plotData = False
 saveData = {
     "save": True,
-    "path":"GeneratedVisualisations/" + saveName + "_" +
+    "path":"GeneratedVisualisations/" + "0UC_" + saveName + "_" +
         ("Uniform" if GeneratorFunc == GeneratePoints_Uniform else "Random") + ".gif",
     "fps": 30,
     "figSize": [320, 240]

@@ -1,5 +1,7 @@
 '''
 Attractor Functions for Chaos Theory
+
+Attractor Formulas: http://www.3d-meier.de/tut19/Seite0.html
 '''
 
 # Imports
@@ -236,11 +238,11 @@ def Deriv_ChenLee(pt, t0, a=5, b=-10, c=-0.38):
 
     a = 5, b = -10, c = -0.38
 
-    timeInterval = [0, 5]
+    timeInterval = [0, 3.5]
     AttractorFunc = AttractorFunctions.Deriv_ChenLee
     saveName = "ChenLeeAttractor"
     GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
-    plotLims = [(-25, 25), (-25, 25), (10, 45)]
+    plotLims = [(-50, 50), (-50, 50), (-75, 75)]
     speedUpFactor = 2
 
     frames = 250
@@ -250,5 +252,57 @@ def Deriv_ChenLee(pt, t0, a=5, b=-10, c=-0.38):
     dx = a*x - y*z
     dy = b*y + x*z
     dz = c*z + x*(y/3)
+
+    return [dx, dy, dz]
+
+def Deriv_DequanLi(pt, t0, a=40, c=1.833, d=0.16, e=0.65, k=55, f=20):
+    """Compute the time-derivative of a Dequan-Li system."""
+    """
+    dx = a*(y-x) + d*x*z
+    dy = k*x + f*y - x*z
+    dz = c*z + x*y -e*(x**2)
+
+    a = 40, c = 1.833, d = 0.16, e = 0.65, k = 55, f = 20
+
+    timeInterval = [0, 2.5]
+    AttractorFunc = AttractorFunctions.Deriv_DequanLi
+    saveName = "DequanLiAttractor"
+    GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
+    plotLims = [(-110, 110), (-110, 110), (20, 225)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = a*(y-x) + d*x*z
+    dy = k*x + f*y - x*z
+    dz = c*z + x*y -e*(x**2)
+
+    return [dx, dy, dz]
+
+def Deriv_Finance(pt, t0, a=0.001, b=0.2, c=1.1):
+    """Compute the time-derivative of a Finance system."""
+    """
+    dx = ((1/b) - a)*x + z + x*y
+    dy = -b*y - (x**2)
+    dz = -x - c*z
+
+    a = 0.001, b = 0.2, c = 1.1
+
+    timeInterval = [0, 20]
+    AttractorFunc = AttractorFunctions.Deriv_Finance
+    saveName = "FinanceAttractor"
+    GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
+    plotLims = [(-7.5, 0), (-7.5, 0), (-10, 5)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = ((1/b) - a)*x + z + x*y
+    dy = -b*y - (x**2)
+    dz = -x - c*z
 
     return [dx, dy, dz]

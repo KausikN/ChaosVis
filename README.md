@@ -52,3 +52,13 @@
 
         ![Chen-Lee Attractor Random](GeneratedVisualisations/ChenLeeAttractor_Random.gif)
         ![Chen-Lee Attractor Uniform](GeneratedVisualisations/ChenLeeAttractor_Uniform.gif)
+
+      - Dequan-Li Attractor System
+
+        ![Dequan-Li Attractor Random](GeneratedVisualisations/DequanLiAttractor_Random.gif)
+        ![Dequan-Li Attractor Uniform](GeneratedVisualisations/DequanLiAttractor_Uniform.gif)
+
+      - Finance Attractor System
+
+        ![Finance Attractor Random](GeneratedVisualisations/FinanceAttractor_Random.gif)
+        ![Finance Attractor Uniform](GeneratedVisualisations/FinanceAttractor_Uniform.gif)
