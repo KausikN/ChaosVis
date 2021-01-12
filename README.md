@@ -62,3 +62,18 @@
 
         ![Finance Attractor Random](GeneratedVisualisations/FinanceAttractor_Random.gif)
         ![Finance Attractor Uniform](GeneratedVisualisations/FinanceAttractor_Uniform.gif)
+
+      - Genesio-Tesi Attractor System
+
+        ![Genesio-Tesi Attractor Random](GeneratedVisualisations/GenesioTesiAttractor_Random.gif)
+        ![Genesio-Tesi Attractor Uniform](GeneratedVisualisations/GenesioTesiAttractor_Uniform.gif)
+
+      - Hadley Attractor System
+
+        ![Hadley Attractor Random](GeneratedVisualisations/HadleyAttractor_Random.gif)
+        ![Hadley Attractor Uniform](GeneratedVisualisations/HadleyAttractor_Uniform.gif)
+
+      - Halvorsen Attractor System
+
+        ![Halvorsen Attractor Random](GeneratedVisualisations/HalvorsenAttractor_Random.gif)
+        ![Halvorsen Attractor Uniform](GeneratedVisualisations/HalvorsenAttractor_Uniform.gif)

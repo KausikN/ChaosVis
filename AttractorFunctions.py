@@ -306,3 +306,81 @@ def Deriv_Finance(pt, t0, a=0.001, b=0.2, c=1.1):
     dz = -x - c*z
 
     return [dx, dy, dz]
+
+def Deriv_GenesioTesi(pt, t0, a=0.44, b=1.1, c=1.0):
+    """Compute the time-derivative of a Genesio-Tesi system."""
+    """
+    dx = y
+    dy = z
+    dz = -c*x - b*y - a*z + (x**2)
+
+    a = 0.44, b = 1.1, c = 1.0
+
+    timeInterval = [0, 50]
+    AttractorFunc = AttractorFunctions.Deriv_GenesioTesi
+    saveName = "GenesioTesiAttractor"
+    GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+    plotLims = [(-0.75, 0.75), (-0.75, 0.75), (-0.75, 0.75)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y
+    dy = z
+    dz = -c*x - b*y - a*z + (x**2)
+
+    return [dx, dy, dz]
+
+def Deriv_Hadley(pt, t0, a=0.2, b=4, f=8, g=1):
+    """Compute the time-derivative of a Hadley system."""
+    """
+    dx = -(y**2) - (z**2) -a*x + a*f
+    dy = x*y - b*x*z - y + g
+    dz = b*x*y + x*z - z
+
+    a = 0.2, b = 4, f = 8, g = 1
+
+    timeInterval = [0, 15]
+    AttractorFunc = AttractorFunctions.Deriv_Hadley
+    saveName = "HadleyAttractor"
+    GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+    plotLims = [(-2, 2), (-2, 2), (-1.5, 1.5)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -(y**2) - (z**2) -a*x + a*f
+    dy = x*y - b*x*z - y + g
+    dz = b*x*y + x*z - z
+
+    return [dx, dy, dz]
+
+def Deriv_Halvorsen(pt, t0, a=1.4):
+    """Compute the time-derivative of a Halvorsen system."""
+    """
+    dx = -a*x - 4*y - 4*z - (y**2)
+    dy = -a*y - 4*z - 4*x - (z**2)
+    dz = -a*z - 4*x - 4*y - (x**2)
+
+    a = 1.4
+
+    timeInterval = [0, 5]
+    AttractorFunc = AttractorFunctions.Deriv_Halvorsen
+    saveName = "HalvorsenAttractor"
+    GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+    plotLims = [(-9, 9), (-9, 9), (-9, 9)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -a*x - 4*y - 4*z - (y**2)
+    dy = -a*y - 4*z - 4*x - (z**2)
+    dz = -a*z - 4*x - 4*y - (x**2)
+
+    return [dx, dy, dz]

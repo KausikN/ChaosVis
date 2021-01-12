@@ -67,7 +67,7 @@ def InitChaosAnimation():
 # animation function.  This will be called sequentially with the frame number
 def UpdateChaosAnimation(i):
     global Lines, Pts, x_t, fig, ax, speedUpFactor, rotationSpeed
-    print(i, "done")
+    print(i, "done", end='\r')
     # we'll step two time-steps per frame.  This leads to nice results.
     i = (speedUpFactor * i) % x_t.shape[1]
 
@@ -137,16 +137,16 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 20]
-AttractorFunc = AttractorFunctions.Deriv_Finance
-saveName = "FinanceAttractor"
-GenerationLimits = [(-1, 1), (-1, 1), (-1, 1)]
-plotLims = [(-7.5, 0), (-7.5, 0), (-10, 5)]
+timeInterval = [0, 5]
+AttractorFunc = AttractorFunctions.Deriv_Halvorsen
+saveName = "HalvorsenAttractor"
+GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+plotLims = [(-9, 9), (-9, 9), (-9, 9)]
 speedUpFactor = 2
 
 frames = 250
 frame_interval = 30
-rotationSpeed = 0
+rotationSpeed = 3
 
 plotData = False
 saveData = {
