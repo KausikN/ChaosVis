@@ -70,12 +70,15 @@ def READMEGenerate(dirPath, start=None, end=None, reverse=False, orderFileName='
 # Driver Code
 # Params
 dirPath = "GeneratedVisualisations/"
-reverse = False
+reverse = True
 start = None
-end = None
+end = 4
 # Params
 
-# RunCode
+# RunCode - Main (Constrained) README
 READMEText = READMEGenerate(dirPath, start=start, end=end, reverse=reverse, orderFileName='order.txt')
+open('README.md', 'w').write(READMEText)
 
-open('README2.md', 'w').write(READMEText)
+# RunCode - Main (Constrained) README
+READMEText = READMEGenerate(dirPath, start=None, end=None, reverse=False, orderFileName='order.txt')
+open('READMEFull.md', 'w').write(READMEText)
