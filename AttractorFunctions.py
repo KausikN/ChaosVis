@@ -472,11 +472,11 @@ def Deriv_Sakarya(pt, t0, a=0.4, b=0.3):
     	
     a = 0.4, b = 0.3
 
-    timeInterval = [0, 30]
+    timeInterval = [0, 10]
     AttractorFunc = AttractorFunctions.Deriv_Sakarya
     saveName = "SakaryaAttractor"
     GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
-    plotLims = [(-9, 9), (-9, 9), (0, 15)]
+    plotLims = [(-25, 25), (-25, 25), (-15, 15)]
     speedUpFactor = 2
 
     frames = 250
