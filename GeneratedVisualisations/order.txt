@@ -1,0 +1,17 @@
+Lorenz
+Aizawa
+Newton-Leipnik
+3 Cell CNN
+Arneodo
+Burke-Shaw
+Chen-Celikovsky
+Chen-Lee
+Dequan-Li
+Finance
+Genesio-Tesi
+Hadley
+Halvorsen
+Nose-Hoover
+Rayleigh-Benard
+Rucklidge
+Sakarya

@@ -137,11 +137,11 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 5]
-AttractorFunc = AttractorFunctions.Deriv_Halvorsen
-saveName = "HalvorsenAttractor"
-GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
-plotLims = [(-9, 9), (-9, 9), (-9, 9)]
+timeInterval = [0, 10]
+AttractorFunc = AttractorFunctions.Deriv_Sakarya
+saveName = "SakaryaAttractor"
+GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+plotLims = [(-25, 25), (-25, 25), (-15, 15)]
 speedUpFactor = 2
 
 frames = 250

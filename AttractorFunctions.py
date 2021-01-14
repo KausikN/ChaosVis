@@ -384,3 +384,107 @@ def Deriv_Halvorsen(pt, t0, a=1.4):
     dz = -a*z - 4*x - 4*y - (x**2)
 
     return [dx, dy, dz]
+
+def Deriv_NoseHoover(pt, t0, a=1.5):
+    """Compute the time-derivative of a Nose-Hoover system."""
+    """
+    dx = y
+    dy = -x + y*z
+    dz = a - (y**2)
+
+    a = 1.5
+
+    timeInterval = [0, 15]
+    AttractorFunc = AttractorFunctions.Deriv_NoseHoover
+    saveName = "NoseHooverAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-3, 3), (-3, 3), (-3, 3)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y
+    dy = -x + y*z
+    dz = a - (y**2)
+
+    return [dx, dy, dz]
+
+def Deriv_RayleighBenard(pt, t0, a=9, r=12, b=5):
+    """Compute the time-derivative of a Rayleigh-Benard system."""
+    """
+    dx = -a*x + a*y
+    dy = r*x - y - x*z
+    dz = x*y - b*z
+    	
+    a = 9, r = 12, b = 5
+
+    timeInterval = [0, 15]
+    AttractorFunc = AttractorFunctions.Deriv_RayleighBenard
+    saveName = "RayleighBenardAttractor"
+    GenerationLimits = [(-5, 5), (-5, 5), (-5, 5)]
+    plotLims = [(-15, 15), (-15, 15), (-5, 15)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -a*x + a*y
+    dy = r*x - y - x*z
+    dz = x*y - b*z
+
+    return [dx, dy, dz]
+
+def Deriv_Rucklidge(pt, t0, k=2, a=6.7):
+    """Compute the time-derivative of a Rucklidge system."""
+    """
+    dx = -k*x + a*y - y*z
+    dy = x
+    dz = -z + (y**2)
+    	
+    k = 2, a = 6.7
+
+    timeInterval = [0, 30]
+    AttractorFunc = AttractorFunctions.Deriv_Rucklidge
+    saveName = "RucklidgeAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-9, 9), (-9, 9), (0, 15)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -k*x + a*y - y*z
+    dy = x
+    dz = -z + (y**2)
+
+    return [dx, dy, dz]
+
+def Deriv_Sakarya(pt, t0, a=0.4, b=0.3):
+    """Compute the time-derivative of a Sakarya system."""
+    """
+    dx = -x + y + y*z
+    dy = -x - y + a*x*z
+    dz = z - b*x*y
+    	
+    a = 0.4, b = 0.3
+
+    timeInterval = [0, 30]
+    AttractorFunc = AttractorFunctions.Deriv_Sakarya
+    saveName = "SakaryaAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-9, 9), (-9, 9), (0, 15)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -x + y + y*z
+    dy = -x - y + a*x*z
+    dz = z - b*x*y
+
+    return [dx, dy, dz]
