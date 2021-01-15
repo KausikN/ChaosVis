@@ -116,3 +116,15 @@
         ![Sakarya Attractor Uniform](GeneratedVisualisations/SakaryaAttractor_Uniform.gif)
 
     
+      - Shimizu-Morioka Attractor System
+
+        ![Shimizu-Morioka Attractor Random](GeneratedVisualisations/ShimizuMoriokaAttractor_Random.gif)
+        ![Shimizu-Morioka Attractor Uniform](GeneratedVisualisations/ShimizuMoriokaAttractor_Uniform.gif)
+
+    
+      - Sprott-Linz A Attractor System
+
+        ![Sprott-Linz A Attractor Random](GeneratedVisualisations/SprottLinzAAttractor_Random.gif)
+        ![Sprott-Linz A Attractor Uniform](GeneratedVisualisations/SprottLinzAAttractor_Uniform.gif)
+
+    

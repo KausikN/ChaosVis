@@ -15,3 +15,5 @@ Nose-Hoover
 Rayleigh-Benard
 Rucklidge
 Sakarya
+Shimizu-Morioka
+Sprott-Linz A

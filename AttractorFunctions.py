@@ -417,7 +417,7 @@ def Deriv_RayleighBenard(pt, t0, a=9, r=12, b=5):
     dx = -a*x + a*y
     dy = r*x - y - x*z
     dz = x*y - b*z
-    	
+    
     a = 9, r = 12, b = 5
 
     timeInterval = [0, 15]
@@ -443,7 +443,7 @@ def Deriv_Rucklidge(pt, t0, k=2, a=6.7):
     dx = -k*x + a*y - y*z
     dy = x
     dz = -z + (y**2)
-    	
+    
     k = 2, a = 6.7
 
     timeInterval = [0, 30]
@@ -469,7 +469,7 @@ def Deriv_Sakarya(pt, t0, a=0.4, b=0.3):
     dx = -x + y + y*z
     dy = -x - y + a*x*z
     dz = z - b*x*y
-    	
+    
     a = 0.4, b = 0.3
 
     timeInterval = [0, 10]
@@ -486,5 +486,55 @@ def Deriv_Sakarya(pt, t0, a=0.4, b=0.3):
     dx = -x + y + y*z
     dy = -x - y + a*x*z
     dz = z - b*x*y
+
+    return [dx, dy, dz]
+
+def Deriv_ShimizuMorioka(pt, t0, a=0.75, b=0.45):
+    """Compute the time-derivative of a Shimizu-Morioka system."""
+    """
+    dx = y
+    dy = (1 - z)*x - a*y
+    dz = (x**2) - b*z
+    
+    a = 0.75, b = 0.45
+
+    timeInterval = [0, 10]
+    AttractorFunc = AttractorFunctions.Deriv_ShimizuMorioka
+    saveName = "ShimizuMoriokaAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1, 3)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y
+    dy = (1 - z)*x - a*y
+    dz = (x**2) - b*z
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzA(pt, t0):
+    """Compute the time-derivative of a Sprott-Linz A system."""
+    """
+    dx = y
+    dy = -x + y*z
+    dz = 1 - (y**2)
+
+    timeInterval = [0, 10]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzA
+    saveName = "SprottLinzAAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1, 3)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y
+    dy = -x + y*z
+    dz = 1 - (y**2)
 
     return [dx, dy, dz]
