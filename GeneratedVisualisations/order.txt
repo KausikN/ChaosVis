@@ -17,3 +17,7 @@ Rucklidge
 Sakarya
 Shimizu-Morioka
 Sprott-Linz A
+Sprott-Linz B
+Sprott-Linz C
+Sprott-Linz D
+Sprott-Linz E

@@ -522,11 +522,11 @@ def Deriv_SprottLinzA(pt, t0):
     dy = -x + y*z
     dz = 1 - (y**2)
 
-    timeInterval = [0, 10]
+    timeInterval = [0, 20]
     AttractorFunc = AttractorFunctions.Deriv_SprottLinzA
     saveName = "SprottLinzAAttractor"
     GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
-    plotLims = [(-1.5, 1.5), (-1.5, 1.5), (-1, 3)]
+    plotLims = [(-2.5, 2.5), (-2.5, 2.5), (-3, 3)]
     speedUpFactor = 2
 
     frames = 250
@@ -536,5 +536,105 @@ def Deriv_SprottLinzA(pt, t0):
     dx = y
     dy = -x + y*z
     dz = 1 - (y**2)
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzB(pt, t0):
+    """Compute the time-derivative of a Sprott-Linz B system."""
+    """
+    dx = y*z
+    dy = x - y
+    dz = 1 - x*y
+
+    timeInterval = [0, 20]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzB
+    saveName = "SprottLinzBAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-3, 3), (-3, 3), (-3, 3)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y*z
+    dy = x - y
+    dz = 1 - x*y
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzC(pt, t0):
+    """Compute the time-derivative of a Sprott-Linz C system."""
+    """
+    dx = y*z
+    dy = x - y
+    dz = 1 - (x**2)
+
+    timeInterval = [0, 20]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzC
+    saveName = "SprottLinzCAttractor"
+    GenerationLimits = [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)]
+    plotLims = [(-2., 2), (-2, 2), (-3, 3)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = y*z
+    dy = x - y
+    dz = 1 - (x**2)
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzD(pt, t0, a=3):
+    """Compute the time-derivative of a Sprott-Linz D system."""
+    """
+    dx = -y
+    dy = x + z
+    dz = x*z + a*(y**2)
+
+    a = 3
+
+    timeInterval = [0, 40]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzD
+    saveName = "SprottLinzDAttractor"
+    GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-0.04, 0.04), (-0.04, 0.04), (-0.01, 0.035)]
+    speedUpFactor = 2
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = -y
+    dy = x + z
+    dz = x*z + a*(y**2)
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzE(pt, t0, a=4):
+    """Compute the time-derivative of a Sprott-Linz E system."""
+    """
+    dx = y*z
+    dy = (x**2) - y
+    dz = 1 - a*x
+
+    a = 4
+
+    timeInterval = [0, 40]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzE
+    saveName = "SprottLinzEAttractor"
+    GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-20, 20), (-20, 20), (-20, 20)]
+    speedUpFactor = 4
+
+    frames = 500
+    """
+    x, y, z = pt
+
+    dx = y*z
+    dy = (x**2) - y
+    dz = 1 - a*x
 
     return [dx, dy, dz]
