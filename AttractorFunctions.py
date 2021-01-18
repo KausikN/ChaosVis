@@ -638,3 +638,55 @@ def Deriv_SprottLinzE(pt, t0, a=4):
     dz = 1 - a*x
 
     return [dx, dy, dz]
+
+def Deriv_SprottLinzF(pt, t0, a=0.5):
+    """Compute the time-derivative of a Sprott-Linz F system."""
+    """
+    dx = y + z
+    dy = -x + a*y
+    dz = (x**2) - z
+
+    a = 0.5
+
+    timeInterval = [0, 40]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzF
+    saveName = "SprottLinzFAttractor"
+    GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-3, 3), (-3, 3), (-2, 6)]
+    speedUpFactor = 4
+
+    frames = 500
+    """
+    x, y, z = pt
+
+    dx = y + z
+    dy = -x + a*y
+    dz = (x**2) - z
+
+    return [dx, dy, dz]
+
+def Deriv_SprottLinzG(pt, t0, a=0.4):
+    """Compute the time-derivative of a Sprott-Linz G system."""
+    """
+    dx = a*x + z
+    dy = x*z - y
+    dz = -x + y
+
+    a = 0.4
+
+    timeInterval = [0, 50]
+    AttractorFunc = AttractorFunctions.Deriv_SprottLinzG
+    saveName = "SprottLinzGAttractor"
+    GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
+    plotLims = [(-2, 2), (-2, 2), (-2, 2)]
+    speedUpFactor = 4
+
+    frames = 250
+    """
+    x, y, z = pt
+
+    dx = a*x + z
+    dy = x*z - y
+    dz = -x + y
+
+    return [dx, dy, dz]

@@ -152,3 +152,15 @@
         ![Sprott-Linz E Attractor Uniform](GeneratedVisualisations/SprottLinzEAttractor_Uniform.gif)
 
     
+      - Sprott-Linz F Attractor System
+
+        ![Sprott-Linz F Attractor Random](GeneratedVisualisations/SprottLinzFAttractor_Random.gif)
+        ![Sprott-Linz F Attractor Uniform](GeneratedVisualisations/SprottLinzFAttractor_Uniform.gif)
+
+    
+      - Sprott-Linz G Attractor System
+
+        ![Sprott-Linz G Attractor Random](GeneratedVisualisations/SprottLinzGAttractor_Random.gif)
+        ![Sprott-Linz G Attractor Uniform](GeneratedVisualisations/SprottLinzGAttractor_Uniform.gif)
+
+    

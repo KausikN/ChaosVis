@@ -79,7 +79,7 @@ def UpdateChaosAnimation(i):
         pt.set_data(x[-1:], y[-1:])
         pt.set_3d_properties(z[-1:])
 
-    ax.view_init(30, 0.3 * i*rotationSpeed)
+    ax.view_init(30, 0.3*i*rotationSpeed)
     fig.canvas.draw()
 
     return Lines + Pts
@@ -137,16 +137,16 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 40]
-AttractorFunc = AttractorFunctions.Deriv_SprottLinzE
-saveName = "SprottLinzEAttractor"
+timeInterval = [0, 50]
+AttractorFunc = AttractorFunctions.Deriv_SprottLinzG
+saveName = "SprottLinzGAttractor"
 GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
-plotLims = [(-20, 20), (-20, 20), (-20, 20)]
+plotLims = [(-2, 2), (-2, 2), (-2, 2)]
 speedUpFactor = 4
 
-frames = 500
+frames = 250
 frame_interval = 30
-rotationSpeed = 3
+rotationSpeed = 2
 
 plotData = False
 saveData = {

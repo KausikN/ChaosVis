@@ -21,3 +21,5 @@ Sprott-Linz B
 Sprott-Linz C
 Sprott-Linz D
 Sprott-Linz E
+Sprott-Linz F
+Sprott-Linz G
