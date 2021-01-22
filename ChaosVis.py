@@ -138,10 +138,10 @@ N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
 timeInterval = [0, 60]
-AttractorFunc = AttractorFunctions.Deriv_SprottLinzK
-saveName = "SprottLinzKAttractor"
-GenerationLimits = [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)]
-plotLims = [(-2, 2), (-2, 2), (0, 4)]
+AttractorFunc = AttractorFunctions.Deriv_SprottLinzM
+saveName = "SprottLinzMAttractor"
+GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+plotLims = [(-4, 4), (-4, 4), (-3, 3)]
 speedUpFactor = 2
 
 frames = 250
