@@ -14,6 +14,18 @@
 # Attractor Systems
    - Visualise Chaos Theory using attractor systems
     
+      - Sprott-Linz Q Attractor System
+
+        ![Sprott-Linz Q Attractor Random](GeneratedVisualisations/SprottLinzQAttractor_Random.gif)
+        ![Sprott-Linz Q Attractor Uniform](GeneratedVisualisations/SprottLinzQAttractor_Uniform.gif)
+
+    
+      - Sprott-Linz P Attractor System
+
+        ![Sprott-Linz P Attractor Random](GeneratedVisualisations/SprottLinzPAttractor_Random.gif)
+        ![Sprott-Linz P Attractor Uniform](GeneratedVisualisations/SprottLinzPAttractor_Uniform.gif)
+
+    
       - Sprott-Linz O Attractor System
 
         ![Sprott-Linz O Attractor Random](GeneratedVisualisations/SprottLinzOAttractor_Random.gif)
@@ -24,17 +36,5 @@
 
         ![Sprott-Linz N Attractor Random](GeneratedVisualisations/SprottLinzNAttractor_Random.gif)
         ![Sprott-Linz N Attractor Uniform](GeneratedVisualisations/SprottLinzNAttractor_Uniform.gif)
-
-    
-      - Sprott-Linz M Attractor System
-
-        ![Sprott-Linz M Attractor Random](GeneratedVisualisations/SprottLinzMAttractor_Random.gif)
-        ![Sprott-Linz M Attractor Uniform](GeneratedVisualisations/SprottLinzMAttractor_Uniform.gif)
-
-    
-      - Sprott-Linz L Attractor System
-
-        ![Sprott-Linz L Attractor Random](GeneratedVisualisations/SprottLinzLAttractor_Random.gif)
-        ![Sprott-Linz L Attractor Uniform](GeneratedVisualisations/SprottLinzLAttractor_Uniform.gif)
 
     

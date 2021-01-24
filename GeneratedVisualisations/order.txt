@@ -31,3 +31,5 @@ Sprott-Linz L
 Sprott-Linz M
 Sprott-Linz N
 Sprott-Linz O
+Sprott-Linz P
+Sprott-Linz Q
