@@ -137,11 +137,11 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
 N_trajectories = 27
 GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 20]
-AttractorFunc = AttractorFunctions.Deriv_SprottLinzQ
-saveName = "SprottLinzQAttractor"
+timeInterval = [0, 15]
+AttractorFunc = AttractorFunctions.Deriv_SprottLinzS
+saveName = "SprottLinzSAttractor"
 GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
-plotLims = [(-7, 7), (-7, 7), (-7, 7)]
+plotLims = [(-5, 5), (-5, 5), (-3, 3)]
 speedUpFactor = 2
 
 frames = 250
