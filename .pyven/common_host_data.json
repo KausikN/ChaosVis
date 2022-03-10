@@ -1,3 +1,9 @@
 {
-    "files_to_download": []
+    "files_to_download": [
+        "ChaosVis.py",
+        "app.py",
+        "StreamLitGUI/",
+        "ChaosLibrary/",
+        "Utils/"
+    ]
 }
