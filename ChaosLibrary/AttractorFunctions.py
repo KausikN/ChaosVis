@@ -1002,3 +1002,229 @@ def Deriv_SprottLinzS(pt, t0, a=4):
     dz = 1 + x
 
     return [dx, dy, dz]
+
+# Main Vars
+ATTRACTOR_FUNCS = {
+    "Lorenz": {
+        "func": Deriv_Lorenz,
+        "GenerationLimits": [(-15, 15), (-15, 15), (-15, 15)],
+        "plotLims": [(-30, 30), (-30, 30), (0, 55)],
+        "speedUpFactor": 2
+    },
+    "Aizawa": {
+        "func": Deriv_Aizawa,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-1.5, 1.5), (-1.5, 1.5), (-0.5, 1.5)],
+        "speedUpFactor": 2
+    },
+    "Newton-Leipnik": {
+        "func": Deriv_NewtonLeipnik,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-1, 1), (-1, 1), (-0.375, 0.65)],
+        "speedUpFactor": 2
+    },
+    "3 Cell CNN": {
+        "func": Deriv_3CellCNN,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-1.5, 1.5), (-1.5, 1.5), (-1.0, 1.0)],
+        "speedUpFactor": 2
+    },
+    "Arneodo": {
+        "func": Deriv_Arneodo,
+        "GenerationLimits": [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)],
+        "plotLims": [(-4, 4), (-4, 4), (-7.0, 7.0)],
+        "speedUpFactor": 2
+    },
+    "Burke-Shaw": {
+        "func": Deriv_BurkeShaw,
+        "GenerationLimits": [(-0.05, -0.05), (-0.05, 0.05), (-0.05, 0.05)],
+        "plotLims": [(-2.5, 2.5), (-2.5, 2.5), (-2.5, 2.5)],
+        "speedUpFactor": 2
+    },
+    "Chen-Celikovsky": {
+        "func": Deriv_ChenCelikovsky,
+        "GenerationLimits": [(-1, 1), (-1, 1), (-1, 1)],
+        "plotLims": [(-25, 25), (-25, 25), (10, 45)],
+        "speedUpFactor": 2
+    },
+    "Chen-Lee": {
+        "func": Deriv_ChenLee,
+        "GenerationLimits": [(-1, 1), (-1, 1), (-1, 1)],
+        "plotLims": [(-50, 50), (-50, 50), (-75, 75)],
+        "speedUpFactor": 2
+    },
+    "Dequan-Li": {
+        "func": Deriv_DequanLi,
+        "GenerationLimits": [(-1, 1), (-1, 1), (-1, 1)],
+        "plotLims": [(-110, 110), (-110, 110), (20, 225)],
+        "speedUpFactor": 2
+    },
+    "Finance": {
+        "func": Deriv_Finance,
+        "GenerationLimits": [(-1, 1), (-1, 1), (-1, 1)],
+        "plotLims": [(-7.5, 0), (-7.5, 0), (-10, 5)],
+        "speedUpFactor": 2
+    },
+    "Genesio-Tesi": {
+        "func": Deriv_GenesioTesi,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-0.75, 0.75), (-0.75, 0.75), (-0.75, 0.75)],
+        "speedUpFactor": 2
+    },
+    "Hadley": {
+        "func": Deriv_Hadley,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-2, 2), (-2, 2), (-1.5, 1.5)],
+        "speedUpFactor": 2
+    },
+    "Halvorsen": {
+        "func": Deriv_Halvorsen,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-9, 9), (-9, 9), (-9, 9)],
+        "speedUpFactor": 2
+    },
+    "Nose-Hoover": {
+        "func": Deriv_NoseHoover,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-3, 3), (-3, 3), (-3, 3)],
+        "speedUpFactor": 2
+    },
+    "Rayleigh-Benard": {
+        "func": Deriv_RayleighBenard,
+        "GenerationLimits": [(-5, 5), (-5, 5), (-5, 5)],
+        "plotLims": [(-15, 15), (-15, 15), (-5, 15)],
+        "speedUpFactor": 2
+    },
+    "Rucklidge": {
+        "func": Deriv_Rucklidge,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-9, 9), (-9, 9), (0, 15)],
+        "speedUpFactor": 2
+    },
+    "Sakarya": {
+        "func": Deriv_Sakarya,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-25, 25), (-25, 25), (-15, 15)],
+        "speedUpFactor": 2
+    },
+    "Shimizu-Morioka": {
+        "func": Deriv_ShimizuMorioka,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-1.5, 1.5), (-1.5, 1.5), (-1, 3)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz A": {
+        "func": Deriv_SprottLinzA,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-2.5, 2.5), (-2.5, 2.5), (-3, 3)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz B": {
+        "func": Deriv_SprottLinzB,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-3, 3), (-3, 3), (-3, 3)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz C": {
+        "func": Deriv_SprottLinzC,
+        "GenerationLimits": [(-0.5, 0.5), (-0.5, 0.5), (-0.5, 0.5)],
+        "plotLims": [(-2., 2), (-2, 2), (-3, 3)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz D": {
+        "func": Deriv_SprottLinzD,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-0.04, 0.04), (-0.04, 0.04), (-0.01, 0.035)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz E": {
+        "func": Deriv_SprottLinzE,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-20, 20), (-20, 20), (-20, 20)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz F": {
+        "func": Deriv_SprottLinzF,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-3, 3), (-3, 3), (-2, 6)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz G": {
+        "func": Deriv_SprottLinzG,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-2, 2), (-2, 2), (-2, 2)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz H": {
+        "func": Deriv_SprottLinzH,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-4, 4), (-4, 4), (-2.5, 2)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz I": {
+        "func": Deriv_SprottLinzI,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-0.75, 0.75), (-0.75, 0.75), (-0.5, 0.75)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz J": {
+        "func": Deriv_SprottLinzJ,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-15, 15), (-15, 15), (-15, 15)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz K": {
+        "func": Deriv_SprottLinzK,
+        "GenerationLimits": [(-0.01, 0.01), (-0.01, 0.01), (-0.01, 0.01)],
+        "plotLims": [(-0.5, 0.5), (-0.5, 0.5), (0, 4)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz L": {
+        "func": Deriv_SprottLinzL,
+        "GenerationLimits": [(-0.025, 0.025), (-0.025, 0.025), (-0.025, 0.025)],
+        "plotLims": [(-25, 25), (-25, 25), (-20, 10)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz M": {
+        "func": Deriv_SprottLinzM,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-4, 4), (-4, 4), (-3, 3)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz N": {
+        "func": Deriv_SprottLinzN,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-15, 15), (-15, 15), (-15, 15)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz O": {
+        "func": Deriv_SprottLinzO,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-15, 15), (-15, 15), (-10, 10)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz P": {
+        "func": Deriv_SprottLinzP,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-2, 2), (-2, 2), (-2, 2)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz Q": {
+        "func": Deriv_SprottLinzQ,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-7, 7), (-7, 7), (-7, 7)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz R": {
+        "func": Deriv_SprottLinzR,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-7, 7), (-7, 7), (-10, 5)],
+        "speedUpFactor": 2
+    },
+    "Sprott-Linz S": {
+        "func": Deriv_SprottLinzS,
+        "GenerationLimits": [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)],
+        "plotLims": [(-7, 7), (-7, 7), (-10, 5)],
+        "speedUpFactor": 2
+    }
+}

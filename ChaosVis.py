@@ -17,7 +17,8 @@ from matplotlib.colors import cnames
 from matplotlib import animation
 from tqdm import tqdm
 
-import AttractorFunctions
+from ChaosLibrary.AttractorFunctions import *
+from Utils.GeneratorFunctions import *
 
 # Main Variables
 Lines = []
@@ -27,48 +28,24 @@ ax = None
 x_t = []
 
 # Main Functions
-# Generation Functions
-def GeneratePoints_UniformRandom(N, Limits=[(-15, 15), (-15, 15), (-15, 15)], seed=5):
-    np.random.seed(seed)
-    x = Limits[0][0] + (Limits[0][1] - Limits[0][0]) * np.random.random(N)
-    y = Limits[1][0] + (Limits[1][1] - Limits[1][0]) * np.random.random(N)
-    z = Limits[2][0] + (Limits[2][1] - Limits[2][0]) * np.random.random(N)
-    pts = np.reshape(np.dstack((x, y, z)), (-1, 3))
-    print(pts.shape)
-    return pts
-
-def GeneratePoints_Uniform(N, Limits=[(-15, 15), (-15, 15), (-15, 15)]):
-    x = np.linspace(Limits[0][0], Limits[0][1], N)
-    y = np.linspace(Limits[1][0], Limits[1][1], N)
-    z = np.linspace(Limits[2][0], Limits[2][1], N)
-
-    pts = []
-    for x0 in x:
-        for y0 in y:
-            for z0 in z:
-                pts.append([x0, y0, z0])
-    pts = np.array(pts)
-
-    print(pts.shape)
-    return pts
-
 # Visualisation Functions
 # initialization function: plot the background of each frame
 def InitChaosAnimation():
     global Lines, Pts, x_t, fig, ax
     for line, pt in zip(Lines, Pts):
         line.set_data([], [])
-        line.set_3d_properties([])
+        # line.set_3d_properties([])
 
         pt.set_data([], [])
-        pt.set_3d_properties([])
+        # pt.set_3d_properties([])
     return Lines + Pts
 
 # animation function.  This will be called sequentially with the frame number
-def UpdateChaosAnimation(i):
+def UpdateChaosAnimation(i, progressObj=None, frames=1):
     global Lines, Pts, x_t, fig, ax, speedUpFactor, rotationSpeed
-    print(i, "done", end='\r')
+
     # we'll step two time-steps per frame.  This leads to nice results.
+    i_old = i
     i = (speedUpFactor * i) % x_t.shape[1]
 
     for line, pt, xi in zip(Lines, Pts, x_t):
@@ -82,9 +59,12 @@ def UpdateChaosAnimation(i):
     ax.view_init(30, 0.3*i*rotationSpeed)
     fig.canvas.draw()
 
+    print(i_old, "done", end='\r')
+    if progressObj is not None: progressObj.progress((i_old+1)/frames)
+
     return Lines + Pts
 
-def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 4], plotLims=[(-25, 25), (-35, 35), (5, 55)], frames=500, frame_interval=30, plotData=True, saveData={"save": False}):
+def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 4], plotLims=[(-25, 25), (-35, 35), (5, 55)], frames=500, frame_interval=30, plotData=True, saveData={"save": False}, progressObj=None):
     global Lines, Pts, x_t, fig, ax, speedUpFactor
     # Choose random starting points, uniformly distributed from -15 to 15
     startPoints = GeneratorFunc(N_trajectories)
@@ -118,7 +98,7 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
     # InitAnim = functools.partial(InitChaosAnimation, Lines, Pts)
     # UpdateAnim = functools.partial(UpdateChaosAnimation, Lines=Lines, Pts=Pts, x_t=x_t, ax=ax, fig=fig)
     InitAnim = InitChaosAnimation
-    UpdateAnim = UpdateChaosAnimation
+    UpdateAnim = functools.partial(UpdateChaosAnimation, progressObj=progressObj, frames=frames)
     anim = animation.FuncAnimation(fig, UpdateAnim, init_func=InitAnim, frames=frames, interval=frame_interval, blit=True)
 
     # Save as mp4. This requires mplayer or ffmpeg to be installed
@@ -133,31 +113,31 @@ def AnimateChaos(AttractorFunc, N_trajectories, GeneratorFunc, timeInterval=[0, 
         plt.show()
 
 # Driver Code
-# Params
-N_trajectories = 27
-GeneratorFunc = GeneratePoints_UniformRandom
+# # Params
+# N_trajectories = 27
+# GeneratorFunc = GeneratePoints_UniformRandom
 
-timeInterval = [0, 15]
-AttractorFunc = AttractorFunctions.Deriv_SprottLinzS
-saveName = "SprottLinzSAttractor"
-GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
-plotLims = [(-5, 5), (-5, 5), (-3, 3)]
-speedUpFactor = 2
+# timeInterval = [0, 15]
+# AttractorFunc = AttractorFunctions.Deriv_SprottLinzS
+# saveName = "SprottLinzSAttractor"
+# GenerationLimits = [(-0.1, 0.1), (-0.1, 0.1), (-0.1, 0.1)]
+# plotLims = [(-5, 5), (-5, 5), (-3, 3)]
+# speedUpFactor = 2
 
-frames = 250
-frame_interval = 30
-rotationSpeed = 3
+# frames = 250
+# frame_interval = 30
+# rotationSpeed = 3
 
-plotData = False
-saveData = {
-    "save": True,
-    "path":"GeneratedVisualisations/" + "0UC_" + saveName + "_" +
-        ("Uniform" if GeneratorFunc == GeneratePoints_Uniform else "Random") + ".gif",
-    "fps": 30,
-    "figSize": [320, 240]
-    }
-# Params
+# plotData = False
+# saveData = {
+#     "save": True,
+#     "path":"GeneratedVisualisations/" + "0UC_" + saveName + "_" +
+#         ("Uniform" if GeneratorFunc == GeneratePoints_Uniform else "Random") + ".gif",
+#     "fps": 30,
+#     "figSize": [320, 240]
+#     }
+# # Params
 
-# RunCode
-saveData["figSize"] = (saveData["figSize"][0]/100, saveData["figSize"][1]/100) # Change FigSize to inches (dpi = 100)
-AnimateChaos(AttractorFunc, N_trajectories, functools.partial(GeneratorFunc, Limits=GenerationLimits), timeInterval=timeInterval, plotLims=plotLims, frames=frames, frame_interval=frame_interval, plotData=plotData, saveData=saveData)
+# # RunCode
+# saveData["figSize"] = (saveData["figSize"][0]/100, saveData["figSize"][1]/100) # Change FigSize to inches (dpi = 100)
+# AnimateChaos(AttractorFunc, N_trajectories, functools.partial(GeneratorFunc, Limits=GenerationLimits), timeInterval=timeInterval, plotLims=plotLims, frames=frames, frame_interval=frame_interval, plotData=plotData, saveData=saveData)

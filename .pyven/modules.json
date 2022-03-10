@@ -1,0 +1,206 @@
+{
+    "name": "ChaosVis",
+    "repoLink": "https://github.com/KausikN/ChaosVis",
+    "localPath": "E:/Github Codes and Projects/Projects/ChaosVis",
+    "modules": {
+        "app.py": {
+            "name": "app",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/app.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "",
+            "dependencies": [
+                "os.py",
+                "functools.py",
+                "streamlit.py",
+                "json.py",
+                "ChaosVis.py"
+            ]
+        },
+        "ChaosVis.py": {
+            "name": "ChaosVis",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/ChaosVis.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "",
+            "dependencies": [
+                "os.py",
+                "functools.py",
+                "numpy.py",
+                "integrate.py",
+                "pyplot.py",
+                "Axes3D.py",
+                "cnames.py",
+                "animation.py",
+                "tqdm.py",
+                "*.py",
+                "*.py"
+            ]
+        },
+        "ChaosLibrary/AttractorFunctions.py": {
+            "name": "AttractorFunctions",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/ChaosLibrary/AttractorFunctions.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "ChaosLibrary",
+            "dependencies": [
+                "matplotlib/pyplot.py",
+                "numpy.py",
+                "FuncAnimation.py",
+                "PillowWriter.py"
+            ]
+        },
+        "Utils/GeneratorFunctions.py": {
+            "name": "GeneratorFunctions",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/Utils/GeneratorFunctions.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "Utils",
+            "dependencies": [
+                "numpy.py"
+            ]
+        },
+        "Utils/GIFRenamer.py": {
+            "name": "GIFRenamer",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/Utils/GIFRenamer.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "Utils",
+            "dependencies": [
+                "os.py",
+                "tqdm.py"
+            ]
+        },
+        "Utils/READMEGen.py": {
+            "name": "READMEGen",
+            "type": "local",
+            "link": "https://github.com/KausikN/ChaosVis/blob/master/Utils/READMEGen.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "Utils",
+            "dependencies": [
+                "os.py",
+                "tqdm.py"
+            ]
+        },
+        "Axes3D.py": {
+            "name": "Axes3D",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "",
+            "dependencies": []
+        },
+        "json.py": {
+            "name": "json",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "PillowWriter.py": {
+            "name": "PillowWriter",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "numpy.py": {
+            "name": "numpy",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "matplotlib/pyplot.py": {
+            "name": "pyplot",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/ChaosVis",
+            "subDir": "matplotlib",
+            "dependencies": []
+        },
+        "pyplot.py": {
+            "name": "pyplot",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "FuncAnimation.py": {
+            "name": "FuncAnimation",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "cnames.py": {
+            "name": "cnames",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "tqdm.py": {
+            "name": "tqdm",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "streamlit.py": {
+            "name": "streamlit",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "*.py": {
+            "name": "*",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "os.py": {
+            "name": "os",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "animation.py": {
+            "name": "animation",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "functools.py": {
+            "name": "functools",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        },
+        "integrate.py": {
+            "name": "integrate",
+            "type": "missing",
+            "link": "",
+            "parentDir": "",
+            "subDir": "",
+            "dependencies": []
+        }
+    }
+}

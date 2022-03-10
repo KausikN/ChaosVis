@@ -6,6 +6,9 @@ Script to Generate the README File for the repo
 import os
 from tqdm import tqdm
 
+# Main Vars
+ORDER_PATH = "ChaosLibrary/order.txt"
+
 # Main Functions
 def GetFiles(dirPath):
     fnames = []
@@ -13,9 +16,9 @@ def GetFiles(dirPath):
         fnames.append(f)
     return fnames
 
-def READMEGenerate(dirPath, start=None, end=None, reverse=False, orderFileName='order.txt'):
+def READMEGenerate(dirPath, start=None, end=None, reverse=False, orderPath=ORDER_PATH):
     gifs = GetFiles(dirPath)
-    order = open(dirPath + orderFileName, 'r').read().split('\n')
+    order = open(dirPath + orderPath, 'r').read().split('\n')
     if reverse:
         order = order[::-1]
     
@@ -47,6 +50,21 @@ def READMEGenerate(dirPath, start=None, end=None, reverse=False, orderFileName='
    
  [![Chaos Theory Video](https://img.youtube.com/vi/fDek6cYijxI/0.jpg)](https://www.youtube.com/watch?v=fDek6cYijxI)
 
+# GUI
+[![https://infinityjoker-apps.herokuapp.com/](https://pyheroku-badge.herokuapp.com/?app=infinityjoker-apps&style=plastic)](https://infinityjoker-apps.herokuapp.com/)
+
+ - GUI built using streamlit
+ - To use app locally,
+    - Clone the repo and run [StartUI.sh](StartUI.sh) to view the app on your browser!
+ - App is also hosted remotely on heroku using my common host app,
+    - [https://infinityjoker-apps.herokuapp.com/](https://infinityjoker-apps.herokuapp.com/)
+
+    - In the Common Host App, simply choose a project to load and click load and deploy.
+
+    - Then go ahead and use the app! :)
+
+    - If you want to change to another app, simply click on View Other Projects in top left and choose any other project and load and deploy.
+
 # Attractor Systems
    - Visualise Chaos Theory using attractor systems
     """
@@ -76,9 +94,9 @@ end = 4
 # Params
 
 # RunCode - Main (Constrained) README
-READMEText = READMEGenerate(dirPath, start=start, end=end, reverse=reverse, orderFileName='order.txt')
+READMEText = READMEGenerate(dirPath, start=start, end=end, reverse=reverse, orderPath=ORDER_PATH)
 open('README.md', 'w').write(READMEText)
 
 # RunCode - Main (Constrained) README
-READMEText = READMEGenerate(dirPath, start=None, end=None, reverse=False, orderFileName='order.txt')
+READMEText = READMEGenerate(dirPath, start=None, end=None, reverse=False, orderPath=ORDER_PATH)
 open('READMEFull.md', 'w').write(READMEText)
